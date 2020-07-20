@@ -12,8 +12,3 @@ final = base64.encodebytes(file.encode('utf-8'))
 f_res = final.decode('utf-8').replace('\n','')
 with open('vmess2.txt',mode='w') as f:
     f.write(f_res)
-    
-
-if __name__ == "__main__":
-    main()
-
