@@ -23,7 +23,8 @@ jobs:
 		
     - name: Update
       run: |
-        python vmess
+        python vmess.py
+        
     - name: commit
       run: |
         git config --global user.email wodeupan1@163.com
