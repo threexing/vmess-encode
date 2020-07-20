@@ -22,9 +22,14 @@ jobs:
     - name: Build
       run: |
         python ./vmess.py
-        
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v4
       with:
-        github_token: ${{ secrets.vmess_encode }}
+        author_name: wodeupan1
+        author_email: wodeupan1@163.com
+        message: "AUTO GENERATE README"
+        add: "*"
+      env:
+        GITHUB_TOKEN: ${{ secrets.vmess_decode }}
 		
