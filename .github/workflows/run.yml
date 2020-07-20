@@ -22,7 +22,7 @@ jobs:
 		
     - name: Update paper list
       run: |
-        python python vmess.py
+        python vmess.py
 		
     - name: commit
       run: |
