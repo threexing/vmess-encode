@@ -1,31 +1,18 @@
-name: Python application
+name: Python Service
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-  schedule:
-    - cron: 0 2,14 * * *
+on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
 
-    steps:
-    - name: checkout actions
-    - uses: actions/checkout@v1
+    runs-on: ubuntu-latest #构建环境，如无特殊需要可以默认为ubuntu-latest
 
-    - name: Set up Python 3.7
+    steps:  # 步骤
+    - uses: actions/checkout@v1    # 注释1
+    - name: Set up Python 3.7      # 使用python特定版本
       uses: actions/setup-python@v1
       with:
-        python-version: 3.7
-		
+        python-version: 3.7        # 注释2
     - name: Build
       run: |
         python ./vmess.py
-		
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.vmess-decode }}
