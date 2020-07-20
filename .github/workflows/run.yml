@@ -21,9 +21,8 @@ jobs:
       with:
         python-version: 3.7
 		
-    - name: Update
+    - name: Build
       run: |
-      	pwd
         python ./vmess.py
 		
     - name: Push changes
