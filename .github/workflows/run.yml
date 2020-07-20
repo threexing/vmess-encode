@@ -22,3 +22,15 @@ jobs:
     - name: Build
       run: |
         python ./vmess.py
+        
+    - name: commit
+      run: |
+        git config --global user.email 1435679023@qq.com
+        git config --global user.name marsggbo
+        git add .
+        git commit -m "update" -a
+		
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.vmess_encode }}
