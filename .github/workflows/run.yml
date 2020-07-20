@@ -29,6 +29,6 @@ jobs:
         author_name: wodeupan1
         author_email: wodeupan1@163.com
         message: "AUTO GENERATE README"
-        add: "vmess2.txt"
+        add: "*"
       env:
         GITHUB_TOKEN: ${{ secrets.vmess_encode }}
