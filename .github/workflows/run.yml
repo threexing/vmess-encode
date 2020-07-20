@@ -1,6 +1,12 @@
 name: Python Service
 
-on: [push]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: 0 2,14 * * *
 
 jobs:
   build:
