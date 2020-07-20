@@ -23,6 +23,7 @@ jobs:
 		
     - name: Update
       run: |
+      	pwd
         python3 ./vmess.py
 		
     - name: Push changes
