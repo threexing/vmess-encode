@@ -23,7 +23,7 @@ jobs:
 		
     - name: Update
       run: |
-        python3 vmess.py
+        python3 ./vmess.py
 		
     - name: Push changes
       uses: ad-m/github-push-action@master
