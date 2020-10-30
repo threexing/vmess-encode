@@ -22,6 +22,7 @@ jobs:
     - name: Build
       run: |
         python ./vmess.py
+        python ./Ezhhes.py
 
     - name: Commit changes
       uses: EndBug/add-and-commit@v4
